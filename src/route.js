@@ -1,5 +1,5 @@
-const UserController = require('./controllers/UserController')
-const CoffeeController = require('./controllers/CoffeeController')
+const UserController = require('./controllers/UserController');
+const CoffeeController = require('./controllers/CoffeeController');
 
 let multer = require("multer")
 

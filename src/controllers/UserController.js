@@ -9,7 +9,7 @@ module.exports = {
         } catch (err) {
             res.status(500).send({
                 error: 'Create user incorrect'
-            })
+            });
         }
     },
 
@@ -19,12 +19,12 @@ module.exports = {
                 where: {
                     id: req.params.userId
                 }
-            })
+            });
             res.send(req.body)
         } catch (err) {
             res.status(500).send({
                 error: 'Update user incorrect'
-            })
+            });
         }
 
     },
@@ -35,18 +35,18 @@ module.exports = {
                 where: {
                     id: req.params.userId
                 }
-            })
+            });
             if (!user) {
                 return res.status(403).send({
                     error: 'The user information was incorrect'
-                })
+                });
             }
             await user.destroy()
             res.send(user)
         } catch (err) {
             res.status(500).send({
                 error: 'The user information was incorrect'
-            })
+            });
         }
     },
 
@@ -57,7 +57,7 @@ module.exports = {
         } catch (err) {
             res.status(500).send({
                 error: 'The user information was incorrect'
-            })
+            });
         }
     },
 
@@ -68,7 +68,7 @@ module.exports = {
         } catch (err) {
             res.status(500).send({
                 error: 'The users information was incorrect'
-            })
+            });
         }
     }
 

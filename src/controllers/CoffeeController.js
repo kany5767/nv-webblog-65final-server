@@ -9,7 +9,7 @@ module.exports = {
         } catch (err) {
             res.status(500).send({
                 error: 'Create coffee incorrect'
-            })
+            });
         }
     },
 
@@ -24,7 +24,7 @@ module.exports = {
         } catch (err) {
             res.status(500).send({
                 error: 'Update coffee incorrect'
-            })
+            });
         }
 
     },
@@ -35,18 +35,18 @@ module.exports = {
                 where: {
                     id: req.params.coffeeId
                 }
-            })
+            });
             if (!coffee) {
                 return res.status(403).send({
                     error: 'The coffee information was incorrect'
-                })
+                });
             }
             await coffee.destroy()
             res.send(coffee)
         } catch (err) {
             res.status(500).send({
                 error: 'The coffee information was incorrect'
-            })
+            });
         }
     },
 
@@ -57,7 +57,7 @@ module.exports = {
         } catch (err) {
             res.status(500).send({
                 error: 'The coffee information was incorrect'
-            })
+            });
         }
     },
 
@@ -68,7 +68,7 @@ module.exports = {
         } catch (err) {
             res.status(500).send({
                 error: 'The coffee information was incorrect'
-            })
+            });
         }
     }
 

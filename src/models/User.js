@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
         name: DataTypes.STRING,
         lastname: DataTypes.STRING,
         status: DataTypes.STRING,
-        type: DataTypes.STRING
-    })
-    return User
+        type: DataTypes.STRING,
+    });
+    return User;
 }
